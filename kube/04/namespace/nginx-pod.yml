@@ -1,0 +1,12 @@
+# kubectl run web --image=nginx --port-80 
+kind: pod
+apiVersion: vi
+metadata:
+  name: web
+  namespace:  testbed
+spec: 
+  containers:
+    - name: nginx
+      image: nginx
+      ports:
+        - containerPort: 80

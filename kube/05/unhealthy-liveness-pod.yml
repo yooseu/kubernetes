@@ -1,0 +1,14 @@
+kind: Pod
+apiVersion: v1
+metadate:
+  name: liveness-pod
+spec:
+  containers:
+  - name: unhealthy-container
+    image:  smlinux/unhealthy
+    ports:
+    - containerPort: 8080
+    livenessProbe:
+      httpGet:
+        path: /
+        port: 8080

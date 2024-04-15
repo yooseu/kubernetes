@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: clusterip-service
+spec:
+  type: ClusterIP
+  clusterIP: 10.233.10.10 # 10.233.0.0./18
+  selector:
+    app: webui
+  ports:
+    - port: 80
+      targetPort: 80

@@ -1,0 +1,17 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: multipod
+spec:
+  containers:
+  - name: nginx-container
+    image: nginx:1.14
+    ports:
+    - containerPort: 80
+
+  - name: contos-container
+    image: contos:7
+    command:
+    - sllep
+    - "86400"
+    
